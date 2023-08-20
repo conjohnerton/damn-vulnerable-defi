@@ -10,7 +10,7 @@ import "./NaiveReceiverLenderPool.sol";
  * @title Attacker, call flashloans on 
  * @author Damn Vulnerable DeFi (https://damnvulnerabledefi.xyz)
  */
-contract Attacker {
+contract NaiveAttacker {
 
     address payable private pool;
     address private s_loserContract;
